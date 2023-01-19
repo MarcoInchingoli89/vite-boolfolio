@@ -34,6 +34,16 @@ export default {
                 return '/img/placeholder_cat.jpg'
             }
         },
+
+        prevPage(url) {
+            console.log(url);
+            this.getProjects(url);
+        },
+
+        nextPage(url) {
+            console.log(url);
+            this.getProjects(url);
+        }
     },
     mounted() {
         this.getProjects(this.base_api_url + '/api/projects');
@@ -105,6 +115,25 @@ export default {
             </div>
         </div>
     </div>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item" v-if="results.prev_page_url" @click="prevPage(results.prev_page_url)">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{
+                results.current_page
+            }}</a>
+            </li>
+            <li class="page-item" v-if="results.next_page_url" @click="nextPage(results.next_page_url)">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 </template>
 
