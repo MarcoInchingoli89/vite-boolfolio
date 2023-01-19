@@ -116,7 +116,7 @@ export default {
         </div>
     </div>
 
-    <nav aria-label="Page navigation">
+    <!-- <nav aria-label="Page navigation">
         <ul class="pagination">
             <li class="page-item" v-if="results.prev_page_url" @click="prevPage(results.prev_page_url)">
                 <a class="page-link" href="#" aria-label="Previous">
@@ -133,7 +133,7 @@ export default {
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
 </template>
 
