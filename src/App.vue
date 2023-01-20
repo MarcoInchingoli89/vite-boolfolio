@@ -26,7 +26,7 @@ export default {
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <router-link class="nav-link active" :to="{ name: 'home' }" aria-current="page">Home <span
+                        <router-link class="nav-link" :to="{ name: 'home' }" aria-current="page">Home <span
                                 class="visually-hidden">(current)</span></router-link>
                     </li>
                     <li class="nav-item">
@@ -47,5 +47,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use './styles/general.scss'
+@use './styles/general.scss';
 </style>

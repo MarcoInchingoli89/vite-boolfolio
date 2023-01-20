@@ -9,7 +9,7 @@ export default {
 <template>
 
     <AppBanner title="About Page" />
-    <div class="container">
+    <div class="container mt-4">
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugiat illo asperiores
             provident aut incidunt. Voluptate necessitatibus nisi delectus, dolorum reprehenderit accusamus aspernatur
             saepe sequi doloribus ullam similique aut dolor!</p>
@@ -32,6 +32,6 @@ export default {
 
 </template>
 
-<style lang="scss">
-@use './styles/general.scss'
+<style lang="scss" scoped>
+
 </style>

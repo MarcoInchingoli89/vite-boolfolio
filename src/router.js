@@ -27,21 +27,15 @@ const router = createRouter({
         },
 
         {
-            path: '/projects',
-            name: 'single-project',
-            component: SingleProjectView
-        },
-
-        {
             path: '/contacts',
             name: 'contacts',
             component: ContactsView
         },
 
         {
-            path: '/:pathMatch(.*)*',
-            name: 'not-found',
-            component: NotFoundView
+            path: '/projects/:id',
+            name: 'single-project',
+            component: SingleProjectView
         },
 
     ]
