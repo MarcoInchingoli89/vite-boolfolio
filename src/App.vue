@@ -1,8 +1,6 @@
 <script>
-import ProjectCard from "./components/ProjectCard.vue"
 export default {
     components: {
-        ProjectCard,
     },
     data() {
         return {
@@ -28,30 +26,23 @@ export default {
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Home <span
-                                class="visually-hidden">(current)</span></a>
+                        <router-link class="nav-link active" :to="{ name: 'home' }" aria-current="page">Home <span
+                                class="visually-hidden">(current)</span></router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <router-link class="nav-link" :to="{ name: 'projects' }">Projects</router-link>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
-                        </div>
+                    <li class="nav-item">
+                        <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" :to="{ name: 'contacts' }">Contacts</router-link>
                     </li>
                 </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
-
-    <ProjectCard />
+    <RouterView />
 
 </template>
 
