@@ -108,7 +108,7 @@ export default {
     </div>
 
     <div v-else class="d-flex justify-content-center align-items-center vh-100">
-        <h2 class="p-2">Loading page...</h2>
+        <h2 class="p-2">Loading...</h2>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hourglass-split"
             viewBox="0 0 16 16">
             <path

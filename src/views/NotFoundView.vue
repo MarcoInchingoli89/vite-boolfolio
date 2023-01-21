@@ -8,7 +8,7 @@ export default {
 
 <template>
     <AppBanner title="404" />
-    <div class="container">
+    <div class="container mt-3">
         <p class="lead">
             😨 Ops, Page not found!
         </p>
