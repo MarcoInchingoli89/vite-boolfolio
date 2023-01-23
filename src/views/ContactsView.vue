@@ -32,7 +32,7 @@ export default {
                 <textarea class="form-control" name="" id="" rows="5"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Contact Me</button>
+            <button type="submit" class="btn btn-dark">Contact Me</button>
         </form>
     </div>
 
