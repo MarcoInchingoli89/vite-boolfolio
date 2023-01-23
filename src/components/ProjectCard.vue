@@ -7,6 +7,7 @@ export default {
     },
     data() {
         return {
+            max: 100,
             state
         }
     },
@@ -20,6 +21,20 @@ export default {
                 return '/img/placeholder_cat.jpg'
             }
         },
+
+        /**
+         * 
+         * @param {string} text the project description
+         */
+
+        trimDescription(text) {
+            if (text) {
+                console.log(text);
+                return text.slice(0, this.max) + '...';
+            }
+
+            return text
+        }
     },
 }
 </script>
@@ -31,7 +46,9 @@ export default {
             <img class="card-img-top img-fluid" :src="getImagePath(project.cover_image)" alt="">
             <div class="card-body">
                 <h4 class="card-title">{{ project.title }}</h4>
-                <p class="card-text">{{ project.description }}</p>
+                <p class="card-text">{{ trimDescription(project.description) }}</p>
+                <router-link class="text-decoration-none"
+                    :to="{ name: 'single-project', params: { id: project.id } }">Read more</router-link>
                 <div class="card-footer text-muted">
                     <div class="type">
                         <strong>Type: </strong>
