@@ -1,8 +1,10 @@
 <script>
 import axios from 'axios'
 import { state } from '../state.js'
+import ProjectCard from '../components/ProjectCard.vue'
 export default {
     name: "ProjectsList",
+    components: { ProjectCard },
     data() {
         return {
             projects: null,
@@ -57,33 +59,12 @@ export default {
 <template>
 
     <div class="container p-5" v-if="results">
-        <div class="row row-cols-1 row-cols-sm-3 g-4">
-            <div class="col" v-for="project in projects">
-                <div class="card">
-                    <img class="card-img-top img-fluid" :src="getImagePath(project.cover_image)" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ project.title }}</h4>
-                        <p class="card-text">{{ project.description }}</p>
-                        <div class="card-footer text-muted">
-                            <div class="type">
-                                <strong>Type: </strong>
-                                <span v-if="project.type">{{ project.type.name }}</span>
-                                <span v-else>Uncategorized</span>
-                            </div>
-                            <div class="technologies">
-                                <strong>Technologies: </strong>
-                                <ul v-if="project.technologies.length > 0">
-                                    <li v-for="technology in project.technologies">{{ technology.name }}</li>
-                                </ul>
-                                <span v-else>
-                                    <span>No technologies</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row row-cols-sm-3 g-4">
+            <ProjectCard :project="project" v-for="project in projects" />
         </div>
+
+
+
 
         <nav aria-label="Page navigation" class="pt-4">
             <ul class="pagination">
