@@ -14,7 +14,6 @@ export default {
             base_api_url: 'http://127.0.0.1:8000',
             loading: true,
             error: null,
-            message: null
         }
     },
     methods: {
@@ -38,11 +37,11 @@ export default {
                     this.project = response.data.results
                     this.loading = false
                 } else {
-                    this.message = "😨 Ops, Page not found!"
+                    this.$router.push({ name: 'not-found' });
                 }
                 console.log(response);
             }).catch(error => {
-                console.log(error)
+                console.log(error);
             })
     }
 }
@@ -76,11 +75,6 @@ export default {
                 </span>
             </div>
         </div>
-    </div>
-
-    <div v-else-if="message" class="d-flex justify-content-center align-items-center vh-100 flex-column">
-        <h2>{{ message }}</h2>
-        <router-link to="/">Go to Homepage</router-link>
     </div>
 
     <div v-else class="d-flex justify-content-center align-items-center vh-100">
