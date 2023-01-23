@@ -1,8 +1,10 @@
 <script>
 import AppNav from './components/AppNav.vue'
+import AppFooter from './components/AppFooter.vue'
 export default {
     components: {
         AppNav,
+        AppFooter,
     },
     data() {
         return {
@@ -19,6 +21,7 @@ export default {
 <template>
     <AppNav />
     <RouterView />
+    <AppFooter />
 
 </template>
 
