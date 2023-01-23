@@ -27,7 +27,7 @@ export default {
 <template>
 
     <div class="col">
-        <div class="card bg-dark text-white border-0 shadow">
+        <div class="card bg-dark text-white border-0 shadow h-100">
             <img class="card-img-top img-fluid" :src="getImagePath(project.cover_image)" alt="">
             <div class="card-body">
                 <h4 class="card-title">{{ project.title }}</h4>

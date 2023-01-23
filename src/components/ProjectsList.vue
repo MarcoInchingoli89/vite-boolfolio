@@ -59,7 +59,7 @@ export default {
 <template>
 
     <div class="container p-5" v-if="results">
-        <div class="row row-cols-sm-3 g-4">
+        <div class="row row-cols-1 row-cols-sm-3 g-4">
             <ProjectCard :project="project" v-for="project in projects" />
         </div>
 
