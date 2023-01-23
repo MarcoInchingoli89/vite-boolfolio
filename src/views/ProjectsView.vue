@@ -1,11 +1,11 @@
 <script>
 import AppBanner from '../components/AppBanner.vue'
-import ProjectCard from '../components/ProjectCard.vue'
+import ProjectsList from '../components/ProjectsList.vue'
 export default {
     name: 'ProjectsView',
     components: {
         AppBanner,
-        ProjectCard
+        ProjectsList
     }
 }
 </script>
@@ -13,7 +13,7 @@ export default {
 <template>
 
     <AppBanner title="Projects" />
-    <ProjectCard />
+    <ProjectsList />
 
 </template>
 
