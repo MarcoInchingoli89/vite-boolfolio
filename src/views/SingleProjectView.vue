@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios'
 import AppBanner from '../components/AppBanner.vue'
+import { state } from '../state.js'
 
 export default {
     name: 'SingleProjectView',
@@ -11,9 +12,9 @@ export default {
     data() {
         return {
             project: null,
-            base_api_url: 'http://127.0.0.1:8000',
             loading: true,
             error: null,
+            state
         }
     },
     methods: {
@@ -21,14 +22,14 @@ export default {
         getImagePath(path) {
             console.log(path);
             if (path) {
-                return this.base_api_url + '/storage/' + path;
+                return this.state.base_api_url + '/storage/' + path;
             } else {
                 return '/img/placeholder_cat.jpg'
             }
         },
     },
     mounted() {
-        const url = this.base_api_url + '/api/projects/' + this.$route.params.id
+        const url = this.state.base_api_url + '/api/projects/' + this.$route.params.id
         console.log(url);
         axios
             .get(url)
