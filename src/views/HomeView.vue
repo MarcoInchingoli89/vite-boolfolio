@@ -9,9 +9,9 @@ export default {
 
     <section class="hero d-flex align-items-center">
         <div class="info container d-flex align-items-center flex-column animate__animated animate__zoomIn">
-            <h1>Marco Inchingoli</h1>
-            <h2 class="text-white font_jost">Full Stack Web Developer</h2>
-            <a class="btn btn-dark rounded-pill font_jost" href="#" role="button">About me</a>
+            <h1 class="text-info">Marco Inchingoli</h1>
+            <h2 class="font_jost">Full Stack Web Developer</h2>
+            <a class="btn btn-primary rounded-pill font_jost" href="#" role="button">About me</a>
         </div>
     </section>
 
@@ -25,20 +25,21 @@ export default {
     height: 100vh;
     background-image: url("../../public/img/home-background.jpg");
     background-size: cover;
+    background-attachment: fixed;
 
     h1 {
         font-family: 'Satisfy', cursive;
-        color: dodgerblue;
         font-size: 100px;
     }
 
     h2 {
         font-size: 50px;
+        color: adjust-hue($color: #0a6394, $degrees: 0);
     }
 
     a {
         font-size: 25px;
-        padding: 1rem;
+        padding: 0.5rem 3.5rem;
     }
 
     .font_jost {
