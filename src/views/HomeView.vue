@@ -11,7 +11,7 @@ export default {
         <div class="info container d-flex align-items-center flex-column animate__animated animate__zoomIn">
             <h1 class="text-info">Marco Inchingoli</h1>
             <h2 class="font_jost">Full Stack Web Developer</h2>
-            <a class="btn btn-primary rounded-pill font_jost" href="#" role="button">About me</a>
+            <a class="btn btn-primary rounded-pill font_jost mt-4" href="#" role="button">About me</a>
         </div>
     </section>
 
