@@ -19,7 +19,8 @@ export default {
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-            <router-link class="navbar-brand" :to="{ name: 'home' }">Vite Boolfolio</router-link>
+            <router-link class="navbar-brand" :to="{ name: 'home' }"><img width="100" src="../../public/img/mi-logo.png"
+                    alt=""></router-link>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -48,5 +49,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+li:hover {
+    border-bottom: 1px solid white;
+}
 </style>
