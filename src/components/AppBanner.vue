@@ -9,7 +9,7 @@ export default {
 
     <div class="banner shadow-sm">
         <div class="container">
-            <h1 class="py-4 mb-0 animate__animated animate__fadeInLeft">{{ title }}</h1>
+            <h1 class="py-4 mb-0 animate__animated animate__fadeInLeft text-center">{{ title }}</h1>
         </div>
     </div>
 
