@@ -12,34 +12,34 @@ export default {
             <section class="images">
                 <div class="row">
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <div class="techno_image h-100 animate__animated animate__fadeInUp">
+                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
                             <img src="../../public/img/html.jpg" class="h-100 w-100 rounded-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <div class="techno_image h-100 animate__animated animate__fadeInUp">
+                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
                             <img src="../../public/img/js.jpg" class="h-100 w-100 rounded-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <div class="techno_image h-100 animate__animated animate__fadeInUp">
+                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
                             <img src="../../public/img/vue.jpeg" class="h-100 w-100 rounded-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <div class="techno_image h-100 animate__animated animate__fadeInUp">
+                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
                             <img src="../../public/img/sass.png" class="h-100 w-100 rounded-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <div class="techno_image h-100 animate__animated animate__fadeInUp">
+                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
                             <img src="../../public/img/php.png" class="h-100 w-100 rounded-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <div class="techno_image h-100 animate__animated animate__fadeInUp">
+                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
                             <img src="../../public/img/laravel.png" class="h-100 w-100 rounded-3" />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
