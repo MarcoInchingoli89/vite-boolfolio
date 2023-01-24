@@ -8,7 +8,7 @@ export default {
 
 <template>
 
-    <AppBanner title="Contacts Page" />
+    <AppBanner title="Contacts" />
     <div class="container mt-4">
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugiat illo asperiores
             provident aut incidunt. Voluptate necessitatibus nisi delectus, dolorum reprehenderit accusamus aspernatur

@@ -12,7 +12,7 @@ export default {
 
 <template>
 
-    <AppBanner title="Projects" />
+    <AppBanner title="Portfolio" />
     <ProjectsList />
 
 </template>

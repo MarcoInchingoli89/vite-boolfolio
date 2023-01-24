@@ -33,7 +33,7 @@ export default {
                                 class="visually-hidden">(current)</span></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'projects' }">Projects</router-link>
+                        <router-link class="nav-link" :to="{ name: 'projects' }">Portfolio</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
@@ -50,6 +50,6 @@ export default {
 
 <style lang="scss" scoped>
 li:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
 }
 </style>

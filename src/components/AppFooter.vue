@@ -6,38 +6,38 @@ export default {
 </script>
 
 <template>
-    <footer class="text-center text-white mt-5 bg-dark">
+    <footer class="text-center text-white bg-dark">
         <div class="container p-4">
             <!-- Immagini -->
             <section class="images">
                 <div class="row">
-                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0 animate__animated animate__flipInY animate__delay-1s">
+                        <a href="#" class="techno_image h-100">
                             <img src="../../public/img/html.jpg" class="h-100 w-100 rounded-3" />
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0 animate__animated animate__flipInY animate__delay-1s">
+                        <a href="#" class="techno_image h-100">
                             <img src="../../public/img/js.jpg" class="h-100 w-100 rounded-3" />
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0 animate__animated animate__flipInY animate__delay-2s">
+                        <a href="#" class="techno_image h-100">
                             <img src="../../public/img/vue.jpeg" class="h-100 w-100 rounded-3" />
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0 animate__animated animate__flipInY animate__delay-2s">
+                        <a href="#" class="techno_image h-100">
                             <img src="../../public/img/sass.png" class="h-100 w-100 rounded-3" />
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0 animate__animated animate__flipInY animate__delay-3s">
+                        <a href="#" class="techno_image h-100">
                             <img src="../../public/img/php.png" class="h-100 w-100 rounded-3" />
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-                        <a href="#" class="techno_image h-100 animate__animated animate__fadeInUp">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0 animate__animated animate__flipInY animate__delay-3s">
+                        <a href="#" class="techno_image h-100">
                             <img src="../../public/img/laravel.png" class="h-100 w-100 rounded-3" />
                         </a>
                     </div>

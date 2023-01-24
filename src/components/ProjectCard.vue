@@ -1,5 +1,6 @@
 <script>
-import { state } from '../state.js'
+import { state } from '../state.js';
+import 'animate.css';
 export default {
     name: "ProjectCard",
     props: {
@@ -36,13 +37,15 @@ export default {
             return text
         }
     },
+
+
 }
 </script>
 
 <template>
 
     <div class="col">
-        <div class="card bg-dark text-white border-0 shadow h-100">
+        <div class="card bg-dark text-white border-0 shadow h-100 animate__animated animate__zoomIn">
             <img class="card-img-top img-fluid" :src="getImagePath(project.cover_image)" alt="">
             <div class="card-body">
                 <h4 class="card-title">{{ project.title }}</h4>
@@ -72,3 +75,7 @@ export default {
 
 
 </template>
+
+<style lang="scss" scoped>
+
+</style>
