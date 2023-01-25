@@ -29,7 +29,7 @@ export default {
                 message: this.message
             }
 
-            axios.post(`${this.state.base_api_url}/contacts`, data).then((response) => {
+            axios.post(`${this.state.base_api_url}/api/contacts`, data).then((response) => {
                 this.success = response.data.success;
                 console.log(response);
 
@@ -63,7 +63,7 @@ export default {
             <div class="mb-3">
                 <label for="" class="form-label">Full Name</label>
                 <input type="text" name="name" id="name" v-model="name" class="form-control" placeholder="Marco Rossi"
-                    aria-describedby="fullNameHelper">
+                    aria-describedby="fullNameHelper" required>
 
                 <p v-for="(error) in errors.name">
                     {{ error }}
@@ -75,7 +75,7 @@ export default {
             <div class="mb-3">
                 <label for="" class="form-label">Email</label>
                 <input type="email" name="email" id="email" v-model="email" class="form-control"
-                    placeholder="marcorossi@example.com" aria-describedby="emailHelper">
+                    placeholder="marcorossi@example.com" aria-describedby="emailHelper" required>
 
                 <p v-for="(error) in errors.name">
                     {{ error }}
@@ -86,7 +86,8 @@ export default {
 
             <div class="mb-3">
                 <label for="" class="form-label">Message</label>
-                <textarea class="form-control" name="message" id="message" v-model="message" rows="5"></textarea>
+                <textarea class="form-control" name="message" id="message" v-model="message" rows="5"
+                    required></textarea>
             </div>
 
             <p v-for="(error) in errors.name">
