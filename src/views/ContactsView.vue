@@ -1,8 +1,49 @@
 <script>
-import AppBanner from '../components/AppBanner.vue'
+import AppBanner from '../components/AppBanner.vue';
+import axios from 'axios';
+import { state } from '../state';
 export default {
     name: 'ContactsView',
-    components: { AppBanner }
+    components: { AppBanner },
+    data() {
+        return {
+            state,
+            name: '',
+            email: '',
+            message: '',
+            success: false,
+            loading: false,
+            errors: {}
+        }
+    },
+    methods: {
+
+        sendForm() {
+            this.loading = true;
+
+            this.errors = {};
+
+            const data = {
+                name: this.name,
+                email: this.email,
+                message: this.message
+            }
+
+            axios.post(`${this.state.base_api_url}/contacts`, data).then((response) => {
+                this.success = response.data.success;
+                console.log(response);
+
+                if (this.success) {
+                    this.name = '';
+                    this.email = '';
+                    this.message = '';
+                } else {
+                    this.errors = response.data.errors;
+                }
+                this.loading = false;
+            })
+        }
+    }
 }
 </script>
 
@@ -14,25 +55,47 @@ export default {
             provident aut incidunt. Voluptate necessitatibus nisi delectus, dolorum reprehenderit accusamus aspernatur
             saepe sequi doloribus ullam similique aut dolor!</p>
 
-        <form action="">
+        <div v-if="success" class="alert alert-success text-start" role="alert">
+            Messaggio inviato con successo!
+        </div>
+
+        <form @submit.prevent="sendForm()">
             <div class="mb-3">
                 <label for="" class="form-label">Full Name</label>
-                <input type="text" name="" id="" class="form-control" placeholder="Marco Rossi"
+                <input type="text" name="name" id="name" v-model="name" class="form-control" placeholder="Marco Rossi"
                     aria-describedby="fullNameHelper">
+
+                <p v-for="(error) in errors.name">
+                    {{ error }}
+                </p>
+
                 <small id="fullNameHelper" class="text-muted">Add your full name</small>
             </div>
+
             <div class="mb-3">
                 <label for="" class="form-label">Email</label>
-                <input type="email" name="" id="" class="form-control" placeholder="marcorossi@example.com"
-                    aria-describedby="emailHelper">
+                <input type="email" name="email" id="email" v-model="email" class="form-control"
+                    placeholder="marcorossi@example.com" aria-describedby="emailHelper">
+
+                <p v-for="(error) in errors.name">
+                    {{ error }}
+                </p>
+
                 <small id="emailHelper" class="text-muted">Add your email</small>
             </div>
+
             <div class="mb-3">
                 <label for="" class="form-label">Message</label>
-                <textarea class="form-control" name="" id="" rows="5"></textarea>
+                <textarea class="form-control" name="message" id="message" v-model="message" rows="5"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-dark">Contact Me</button>
+            <p v-for="(error) in errors.name">
+                {{ error }}
+            </p>
+
+            <button type="submit" class="btn btn-dark" :disabled="loading"> {{
+                loading? 'Sending...': 'Contact me'
+            }}</button>
         </form>
     </div>
 
