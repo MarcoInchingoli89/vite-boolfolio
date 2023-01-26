@@ -7,18 +7,21 @@ export default {
 
 <template>
 
-    <section class="hero">
+    <section id="hero">
+        <!-- Wrapper -->
         <div class="hero_wrapper">
+            <!-- Background Image -->
             <div class="hero_bg">
+                <!-- Overlay Effect -->
                 <div class="hero_overlay d-flex align-items-center">
-                    <div class="container m-auto">
-                        <div class="row">
-                            <div class="col-12 text-center animate__animated animate__zoomIn">
-                                <h2 class="text-white font_satisfy">I'm Marco Inchingoli</h2>
-                                <h3 class="text-white font_jost">A Web Developer Full Stack</h3>
-                                <p class="text-white font_jost">based in Colleferro, Italy</p>
-                                <button type="button" class="btn btn-outline-info rounded-pill px-4">Button</button>
-                            </div>
+                    <div class="container">
+                        <!-- Homepage Text -->
+                        <div class="text_content text-center animate__animated animate__zoomIn">
+                            <h2 class="text-white font_satisfy">I'm Marco Inchingoli</h2>
+                            <h3 class="text-white font_jost">A Web Developer Full Stack</h3>
+                            <p class="text-white font_jost">based in Colleferro, Italy</p>
+                            <router-link class="btn btn-outline-info rounded-pill" :to="{ name: 'about' }"
+                                role="button">About Me</router-link>
                         </div>
                     </div>
                 </div>
@@ -29,7 +32,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,300&family=Satisfy&display=swap');
+
 
 .hero_wrapper {
     position: relative;
@@ -51,20 +56,8 @@ export default {
         bottom: 0;
     }
 
-
-    h1 {
-        font-family: 'Satisfy', cursive;
-        font-size: 100px;
-    }
-
     h2 {
         font-size: 50px;
-        /* color: adjust-hue($color: #0a6394, $degrees: 0); */
-    }
-
-    a {
-        font-size: 25px;
-        padding: 0.5rem 3.5rem;
     }
 
     .font_jost {
@@ -73,6 +66,25 @@ export default {
 
     .font_satisfy {
         font-family: 'Satisfy', cursive;
+    }
+
+    a {
+        font-family: 'Jost', sans-serif;
+        color: $bf-secondary;
+        padding: 0.8rem 2.5rem;
+        font-weight: bold;
+    }
+
+    .btn-outline-info {
+        border-color: $bf-secondary;
+        border-width: 3px;
+
+
+    }
+
+    .btn-outline-info:hover {
+        background-color: $bf-secondary;
+        color: white;
     }
 }
 </style>

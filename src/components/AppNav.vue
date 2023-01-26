@@ -24,7 +24,8 @@ export default {
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">
+                </span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -49,7 +50,23 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,300&family=Satisfy&display=swap');
+
 li:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2.5px solid $bf-secondary;
+}
+
+a.router-link-active.router-link-exact-active.nav-link {
+    color: $bf-secondary;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Jost', sans-serif;
+}
+
+.nav-link:hover {
+    color: $bf-secondary;
 }
 </style>
