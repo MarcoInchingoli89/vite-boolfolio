@@ -9,7 +9,7 @@ export default {
 <template>
 
     <AppBanner title="About" />
-    <div class="container mt-4">
+    <div class="container-fluid pt-4 vh-100 text-white text-center">
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugiat illo asperiores
             provident aut incidunt. Voluptate necessitatibus nisi delectus, dolorum reprehenderit accusamus aspernatur
             saepe sequi doloribus ullam similique aut dolor!</p>
@@ -33,5 +33,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
 
+.container-fluid {
+    background-color: $bf-primary;
+}
 </style>
