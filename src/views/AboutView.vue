@@ -47,11 +47,11 @@ export default {
         </section>
         <!-- esperienze e formazione -->
         <section class="experience_formation">
-            <div class="container">
-                <div class="row row-cols-2 d-flex">
+            <div class="container border_bottom_green mb-2">
+                <div class="row row-cols-2">
                     <!-- Experience -->
                     <div class="col">
-                        <h3 class="text-white font_jost">Experience</h3>
+                        <h3 class="text-white font_jost mt-2">Experience</h3>
                         <ul class="list-unstyled">
                             <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h-100">
                                 <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
@@ -86,7 +86,7 @@ export default {
                     </div>
                     <!-- Education -->
                     <div class="col">
-                        <h3 class="text-white font_jost">Education</h3>
+                        <h3 class="text-white font_jost mt-2">Education</h3>
                         <ul class="list-unstyled">
                             <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h_363">
                                 <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
@@ -133,6 +133,63 @@ export default {
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- competenze -->
+        <section class="skills">
+            <div class="container text-white">
+                <h3 class="text-white font_jost">Competenze</h3>
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <ul class="list-unstyled">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h-100">
+                                <div class="container">
+                                    <div class="row row-cols-2">
+                                        <div class="col h5">
+                                            <ul>
+                                                <li>HTML5</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                                <li>MySQL</li>
+                                                <li>PHP</li>
+                                                <li>GitHub</li>
+                                                <li>Figma</li>
+                                                <li>MAMP</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-unstyled">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h-100">
+                                <div class="container">
+                                    <div class="row row-cols-2">
+                                        <div class="col h5">
+                                            <ul>
+                                                <li>Vite</li>
+                                                <li>Vue</li>
+                                                <li>Bootstrap</li>
+                                                <li>SASS</li>
+                                                <li>Laravel</li>
+                                                <li>Postman</li>
+                                                <li>PhpMyAdmin</li>
+                                                <li>API/Axios</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-outline-secondary rounded-pill px-5 py-3 mb-2">Download CV</button>
+            </div>
+
+
         </section>
     </div>
 
