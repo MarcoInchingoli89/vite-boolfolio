@@ -48,11 +48,12 @@ export default {
         <!-- esperienze e formazione -->
         <section class="experience_formation">
             <div class="container">
-                <div class="row row-cols-2">
+                <div class="row row-cols-2 d-flex">
+                    <!-- Experience -->
                     <div class="col">
                         <h3 class="text-white font_jost">Experience</h3>
                         <ul class="list-unstyled">
-                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h-100">
                                 <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
                                 <h4 class="text-white font_jost">Full Stack Web Developer Trainee</h4>
                                 <p class="bf_secondary m-0 mb-3">Boolean Careers - A tempo pieno - Da remoto</p>
@@ -69,8 +70,66 @@ export default {
                                 </p>
                             </li>
                         </ul>
+                        <ul class="list-unstyled">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h_363">
+                                <div class="badge badge-primary bg_green w-25 m-2">2008 - 2022</div>
+                                <h4 class="text-white font_jost">Redattore Freelance</h4>
+                                <p class="bf_secondary m-0 mb-3">Varie testate giornalistiche - Da remoto</p>
+                                <p class="text-secondary font_jost">
+                                    Ho lavorato come redattore freelance per varie testate videoludiche tra cui
+                                    TheGamesMachine, IGN e PSMania, e collaboro saltuariamente per le testate FocusTech
+                                    e InfinityNews dove scrivo articoli di vario genere, ma soprattutto nel settore
+                                    scientifico e videoludico.
+                                </p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col"></div>
+                    <!-- Education -->
+                    <div class="col">
+                        <h3 class="text-white font_jost">Education</h3>
+                        <ul class="list-unstyled">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h_363">
+                                <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
+                                <h4 class="text-white font_jost">Master Full Stack Web Developer</h4>
+                                <p class="bf_secondary m-0 mb-3">Boolean Careers - A tempo pieno - Da remoto</p>
+                                <p class="text-secondary font_jost">
+                                    In sei mesi di corso intensivo per un totale di oltre 700 ore di lezione ho appreso
+                                    e utilizzato le seguenti tecnologie:
+                                    <!-- Tecnologie apprese -->
+                                <div class="container">
+                                    <div class="row row-cols-2">
+                                        <div class="col">
+                                            <ul>
+                                                <li>HTML5</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                                <li>MySQL</li>
+                                                <li>PHP</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul>
+                                                <li>Vite</li>
+                                                <li>Vue</li>
+                                                <li>Bootstrap</li>
+                                                <li>SASS</li>
+                                                <li>Laravel</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h_363">
+                                <div class="badge badge-primary bg_green w-25 m-2">2002 - 2007</div>
+                                <h4 class="text-white font_jost">Istituto d'Istruzione Superiore "Carlo e Nello
+                                    Rosselli"</h4>
+                                <p class="bf_secondary m-0 mb-3">Diploma in Elettronica e Telecomunicazioni</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -129,5 +188,9 @@ export default {
     .font_jost {
         font-family: 'Jost', sans-serif;
     }
+}
+
+.h_363 {
+    height: 363px;
 }
 </style>
