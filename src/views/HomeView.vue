@@ -18,7 +18,7 @@ export default {
                         <!-- Homepage Text -->
                         <div class="text_content text-center animate__animated animate__zoomIn">
                             <h2 class="text-white font_satisfy">I'm Marco Inchingoli</h2>
-                            <h3 class="text-white font_jost">A Web Developer Full Stack</h3>
+                            <h3 class="text-white font_jost">A Jr. Full Stack Web Developer</h3>
                             <p class="text-white font_jost">based in Colleferro, Italy</p>
                             <router-link class="btn btn-outline-info rounded-pill" :to="{ name: 'about' }"
                                 role="button">About Me</router-link>

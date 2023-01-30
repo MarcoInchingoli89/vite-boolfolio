@@ -11,36 +11,68 @@ export default {
     <AppBanner title="About" />
     <div class="container-fluid pt-4">
         <div class="image_wrapper d-flex align-center justify-content-center">
+            <!-- immagine Marco -->
             <div class="about_image rounded-circle p-2 mb-3">
                 <img width="100" class="img-fluid rounded-circle h-100 w-100" src="../../public/img/marco-about.jpeg"
                     alt="">
             </div>
         </div>
+        <!-- info personali -->
         <section class="info_about text-center">
-            <h1 class="title_info text-white mb-0 pb-3">I'm <span class="bf_secondary">Marco
-                    Inchingoli</span>,
-                a
-                Full Stack Web
-                Developer</h1>
-            <p class="lead text-secondary mb-0 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Fuga dolor
-                natus
-                possimus impedit
-                omnis laboriosam dignissimos dolore quos quod ullam consequatur provident quam ex corporis, iste, animi
-                porro veniam cum? Minima et, ullam consequuntur eaque molestiae eum dolorum illum, vitae incidunt fuga
-                libero a consequatur laborum sint pariatur quisquam voluptatem autem dignissimos voluptates cumque
-                praesentium harum. Temporibus, cumque eius! Dicta fugiat laborum, quis iure, ea quas necessitatibus
-                dignissimos, excepturi fugit dolore magnam tempore! Ullam illo aut ad illum, molestiae id rem veritatis
-                enim eum aliquid fugiat animi veniam repellat pariatur assumenda laborum praesentium beatae fuga.
-                Asperiores odio dolores laudantium, odit nam est nesciunt cumque natus, deserunt aliquam minima.
-                Distinctio cupiditate dignissimos, laborum commodi odio expedita modi doloremque quo incidunt.
-                Aspernatur voluptatum sit cum ab blanditiis nulla ut laborum necessitatibus commodi, voluptas provident
-                odit exercitationem eligendi iure? Deleniti fugiat quis cumque ipsa reiciendis iure dolore officiis
-                laboriosam odio officia, reprehenderit voluptates voluptatum eius in dolorem ducimus facere voluptatibus
-                magni nisi rerum molestiae! Tempora velit quaerat est! Porro adipisci assumenda dolores quod, mollitia
-                quisquam quae aperiam vel. Similique harum soluta veniam vel, ex unde, explicabo qui culpa placeat
-                commodi delectus, omnis eligendi iusto et. Minus praesentium repellendus voluptates rerum?
-                Exercitationem, consequatur temporibus.</p>
+            <div class="container border_bottom_green">
+                <h1 class="title_info text-white mb-0 pb-3">I'm <span class="bf_secondary">Marco
+                        Inchingoli</span>,
+                    a
+                    Jr. Full Stack Web
+                    Developer</h1>
+                <p class="lead text-secondary mb-0 pb-3">Cresciuto a pane e videogiochi, ho sempre avuto una grande
+                    passione
+                    per la tecnologia. Sin da piccolo ho sempre sognato di entrare nel mondo della programmazione poiché
+                    ammaliato dai computer, dai software e dal mondo digitale. I videogiochi mi hanno sviato in un primo
+                    momento portandomi a scrivere per varie testate giornalistiche nel settore videoludico come
+                    freelance,
+                    ma pur mantenendo la passione verso il mondo videoludico, un bisogno di un futuro più concreto mi ha
+                    riportato verso il sogno che avevo da bambino. Dopo essere entrato in contatto con la tech academy
+                    Boolean, ho intrapreso un lungo percorso che mi ha riportato a quella passione originale, scoprendo
+                    un
+                    nuovo mondo che mi ha portato ad innamorarmi giorno dopo giorno imparando nuove tecnologie e
+                    sviluppando
+                    nuove abilità logiche e creative.
+
+                    Non smettete mai di credere nei vostri sogni, poiché potrebbero realizzarsi quando meno te lo
+                    aspetti.
+                </p>
+                <button type="button" class="btn btn-primary rounded-pill px-5 py-3 mb-3">Download CV</button>
+            </div>
+        </section>
+        <!-- esperienze e formazione -->
+        <section class="experience_formation">
+            <div class="container">
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <h3 class="text-white font_jost">Experience</h3>
+                        <ul class="list-unstyled">
+                            <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2">
+                                <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
+                                <h4 class="text-white font_jost">Full Stack Web Developer Trainee</h4>
+                                <p class="bf_secondary m-0 mb-3">Boolean Careers - A tempo pieno - Da remoto</p>
+                                <p class="text-secondary font_jost">
+                                    Con Boolean ho intrapreso un percorso intensivo durato per 6 mesi che mi ha formato
+                                    non solo a livello di competenze tecniche, ma anche a livello personale. In questi
+                                    mesi ho imparato ad approcciarmi al mondo del Web Development e ho appreso le
+                                    principali tecnologie front-end e back-end quali HTML, CSS (SASS), Bootstrap,
+                                    JavaScript, Vue, Vite, PHP, MySql e Laravel. La didattica è avvenuta in remoto e si
+                                    suddivideva in lezione mattutina ed esercizio pomeridiano. Gli esercizi oltre a
+                                    mettere in pratica ciò che vedevamo la mattina in chiave teorica ci ha permesso di
+                                    portare a casa una serie di progetti, alcuni ispirati a Web App note come WhatsApp,
+                                    Spotify, PlayStation, Netflix e molte altre.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -69,9 +101,33 @@ export default {
         font-family: 'Jost', sans-serif;
     }
 
+    .btn-primary {
+        background-color: $bf-secondary;
+        border-color: $bf-secondary;
+    }
+
+    .btn-primary:hover {
+        background-color: transparent;
+    }
+
+    .border_bottom_green {
+        border-bottom: 2.5px solid $bf-secondary;
+    }
+
     .bf_secondary {
         color: $bf-secondary;
-        ;
+    }
+
+    .bg_green {
+        background-color: $bf-secondary;
+    }
+
+    .bg_dark {
+        background-color: $bf-dark;
+    }
+
+    .font_jost {
+        font-family: 'Jost', sans-serif;
     }
 }
 </style>
