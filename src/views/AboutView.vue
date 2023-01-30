@@ -127,6 +127,7 @@ export default {
                                 <h4 class="text-white font_jost">Istituto d'Istruzione Superiore "Carlo e Nello
                                     Rosselli"</h4>
                                 <p class="bf_secondary m-0 mb-3">Diploma in Elettronica e Telecomunicazioni</p>
+                                <p class="text-secondary font_jost">Valutazione: 70/100</p>
                             </li>
                         </ul>
                     </div>
