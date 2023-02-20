@@ -48,60 +48,90 @@ export default {
 </script>
 
 <template>
-
     <AppBanner title="Contacts" />
-    <div class="container mt-4">
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugiat illo asperiores
-            provident aut incidunt. Voluptate necessitatibus nisi delectus, dolorum reprehenderit accusamus aspernatur
-            saepe sequi doloribus ullam similique aut dolor!</p>
+    <div class="container-fluid bg_contacts">
+        <div class="container align-items-center justify-content-center">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col mt-4 mb-4">
+                    <div v-if="success" class="alert alert-success text-start" role="alert">
+                        Messaggio inviato con successo!
+                    </div>
 
-        <div v-if="success" class="alert alert-success text-start" role="alert">
-            Messaggio inviato con successo!
+                    <form class="d-flex flex-column" @submit.prevent="sendForm()">
+                        <div class="d-flex">
+                            <div class="mb-3">
+                                <input type="text" name="name" id="name" v-model="name"
+                                    class="form-control w_custom bg_input" placeholder="Name"
+                                    aria-describedby="fullNameHelper" required>
+
+                                <p v-for="(error) in errors.name">
+                                    {{ error }}
+                                </p>
+                            </div>
+
+                            <div class="mb-3 ms-4">
+                                <input type="email" name="email" id="email" v-model="email"
+                                    class="form-control w_custom bg_input" placeholder="Email"
+                                    aria-describedby="emailHelper" required>
+
+                                <p v-for="(error) in errors.name">
+                                    {{ error }}
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <textarea class="form-control bg_input" placeholder="Message" name="message" id="message"
+                                v-model="message" rows="5" required></textarea>
+                        </div>
+
+                        <p v-for="(error) in errors.name">
+                            {{ error }}
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary rounded-pill px-5 py-3 mb-3 btn_w_custom"
+                                :disabled="loading">
+                                {{
+                                    loading ? 'Sending...' : 'Send Message'
+                                }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <form @submit.prevent="sendForm()">
-            <div class="mb-3">
-                <label for="" class="form-label">Full Name</label>
-                <input type="text" name="name" id="name" v-model="name" class="form-control" placeholder="Marco Rossi"
-                    aria-describedby="fullNameHelper" required>
-
-                <p v-for="(error) in errors.name">
-                    {{ error }}
-                </p>
-
-                <small id="fullNameHelper" class="text-muted">Add your full name</small>
-            </div>
-
-            <div class="mb-3">
-                <label for="" class="form-label">Email</label>
-                <input type="email" name="email" id="email" v-model="email" class="form-control"
-                    placeholder="marcorossi@example.com" aria-describedby="emailHelper" required>
-
-                <p v-for="(error) in errors.name">
-                    {{ error }}
-                </p>
-
-                <small id="emailHelper" class="text-muted">Add your email</small>
-            </div>
-
-            <div class="mb-3">
-                <label for="" class="form-label">Message</label>
-                <textarea class="form-control" name="message" id="message" v-model="message" rows="5"
-                    required></textarea>
-            </div>
-
-            <p v-for="(error) in errors.name">
-                {{ error }}
-            </p>
-
-            <button type="submit" class="btn btn-dark" :disabled="loading"> {{
-                loading? 'Sending...': 'Contact me'
-            }}</button>
-        </form>
     </div>
-
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,300&family=Satisfy&display=swap');
 
+.bg_contacts {
+    background-color: $bf-primary;
+}
+
+.w_custom {
+    width: 24rem;
+    padding: 0.6rem 1rem;
+}
+
+.bg_input {
+    background-color: $bf-darker;
+}
+
+.btn_w_custom {
+    width: 14rem;
+    padding: 0.6rem 1rem;
+}
+
+.btn-primary {
+    background-color: $bf-secondary;
+    border-color: $bf-secondary;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+}
 </style>

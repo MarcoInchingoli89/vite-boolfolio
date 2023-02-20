@@ -199,7 +199,8 @@ export default {
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <button type="button" class="btn btn-outline-secondary rounded-pill px-5 py-3 mb-2">Download CV</button>
+                <button @click="downloadPDF" type="button"
+                    class="btn btn-outline-primary rounded-pill px-5 py-3 mb-2 text-white">Download CV</button>
             </div>
 
 
@@ -237,6 +238,14 @@ export default {
 
     .btn-primary:hover {
         background-color: transparent;
+    }
+
+    .btn-outline-primary {
+        border-color: $bf-secondary;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: $bf-secondary;
     }
 
     .border_bottom_green {
