@@ -2,12 +2,24 @@
 import AppBanner from '../components/AppBanner.vue'
 export default {
     name: 'AboutView',
-    components: { AppBanner }
+    components: { AppBanner },
+    methods: {
+        async downloadPDF() {
+            const response = await fetch('/assets/marco-inchingoli-cv.pdf');
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'marco-inchingoli-cv.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
 }
 </script>
 
 <template>
-
     <AppBanner title="About" />
     <div class="container-fluid pt-4">
         <div class="image_wrapper d-flex align-center justify-content-center">
@@ -42,7 +54,8 @@ export default {
                     Non smettete mai di credere nei vostri sogni, poiché potrebbero realizzarsi quando meno te lo
                     aspetti.
                 </p>
-                <button type="button" class="btn btn-primary rounded-pill px-5 py-3 mb-3">Download CV</button>
+                <button @click="downloadPDF" type="button" class="btn btn-primary rounded-pill px-5 py-3 mb-3">Download
+                    CV</button>
             </div>
         </section>
         <!-- esperienze e formazione -->
@@ -192,7 +205,6 @@ export default {
 
         </section>
     </div>
-
 </template>
 
 <style lang="scss" scoped>
