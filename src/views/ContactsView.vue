@@ -62,7 +62,7 @@ export default {
                         <div class="d-flex">
                             <div class="mb-3">
                                 <input type="text" name="name" id="name" v-model="name"
-                                    class="form-control w_custom bg_input" placeholder="Name"
+                                    class="form-control w_custom bg_input text-white" placeholder="Name"
                                     aria-describedby="fullNameHelper" required>
 
                                 <p v-for="(error) in errors.name">
@@ -72,7 +72,7 @@ export default {
 
                             <div class="mb-3 ms-4">
                                 <input type="email" name="email" id="email" v-model="email"
-                                    class="form-control w_custom bg_input" placeholder="Email"
+                                    class="form-control w_custom bg_input text-white" placeholder="Email"
                                     aria-describedby="emailHelper" required>
 
                                 <p v-for="(error) in errors.name">
@@ -83,8 +83,8 @@ export default {
 
 
                         <div class="mb-3">
-                            <textarea class="form-control bg_input" placeholder="Message" name="message" id="message"
-                                v-model="message" rows="5" required></textarea>
+                            <textarea class="form-control bg_input border-0 text-white" placeholder="Message" name="message"
+                                id="message" v-model="message" rows="5" required></textarea>
                         </div>
 
                         <p v-for="(error) in errors.name">
@@ -115,6 +115,7 @@ export default {
 .w_custom {
     width: 24rem;
     padding: 0.6rem 1rem;
+    border: 0;
 }
 
 .bg_input {
