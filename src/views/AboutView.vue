@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <AppBanner title="About" />
+    <AppBanner title="Conoscimi di più" />
     <div class="container-fluid pt-4">
         <div class="image_wrapper d-flex align-center justify-content-center">
             <!-- immagine Marco -->
@@ -32,9 +32,8 @@ export default {
         <!-- info personali -->
         <section class="info_about text-center">
             <div class="container border_bottom_green">
-                <h1 class="title_info text-white mb-0 pb-3">I'm <span class="bf_secondary">Marco
+                <h1 class="title_info text-white mb-0 pb-3">Sono <span class="bf_secondary">Marco
                         Inchingoli</span>,
-                    a
                     Jr. Full Stack Web
                     Developer</h1>
                 <p class="lead text-secondary mb-0 pb-3">Cresciuto a pane e videogiochi, ho sempre avuto una grande
@@ -54,7 +53,8 @@ export default {
                     Non smettete mai di credere nei vostri sogni, poiché potrebbero realizzarsi quando meno te lo
                     aspetti.
                 </p>
-                <button @click="downloadPDF" type="button" class="btn btn-primary rounded-pill px-5 py-3 mb-3">Download
+                <button @click="downloadPDF" type="button"
+                    class="btn btn-primary rounded-pill px-5 py-3 mb-3 font_jost font_custom">Scarica
                     CV</button>
             </div>
         </section>
@@ -64,7 +64,7 @@ export default {
                 <div class="row row-cols-2">
                     <!-- Experience -->
                     <div class="col">
-                        <h3 class="text-white font_jost mt-2">Experience</h3>
+                        <h3 class="text-white font_jost mt-2">Esperienze</h3>
                         <ul class="list-unstyled">
                             <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h-100">
                                 <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
@@ -99,7 +99,7 @@ export default {
                     </div>
                     <!-- Education -->
                     <div class="col">
-                        <h3 class="text-white font_jost mt-2">Education</h3>
+                        <h3 class="text-white font_jost mt-2">Formazione</h3>
                         <ul class="list-unstyled">
                             <li class="ms-2 card text-white bg_dark mb-3 px-2 py-2 h_363">
                                 <div class="badge badge-primary bg_green w-25 m-2">2022 - 2023</div>
@@ -200,7 +200,8 @@ export default {
             </div>
             <div class="d-flex align-items-center justify-content-center">
                 <button @click="downloadPDF" type="button"
-                    class="btn btn-outline-primary rounded-pill px-5 py-3 mb-2 text-white">Download CV</button>
+                    class="btn btn-outline-primary rounded-pill px-5 py-3 mb-2 text-white font_jost font_custom">Scarica
+                    CV</button>
             </div>
 
 
@@ -271,5 +272,9 @@ export default {
 
 .h_363 {
     height: 363px;
+}
+
+.font_custom {
+    font-weight: bold;
 }
 </style>

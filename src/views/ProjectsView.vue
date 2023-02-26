@@ -11,12 +11,8 @@ export default {
 </script>
 
 <template>
-
-    <AppBanner title="Portfolio" />
+    <AppBanner title="I miei progetti" />
     <ProjectsList />
-
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

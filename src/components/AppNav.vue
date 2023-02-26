@@ -16,7 +16,6 @@ export default {
 </script>
 
 <template>
-
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
             <router-link class="navbar-brand" :to="{ name: 'home' }"><img width="100" src="../../public/img/mi-logo.png"
@@ -34,19 +33,18 @@ export default {
                                 class="visually-hidden">(current)</span></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'projects' }">Portfolio</router-link>
+                        <router-link class="nav-link" :to="{ name: 'projects' }">Progetti</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
+                        <router-link class="nav-link" :to="{ name: 'about' }">Su di me</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'contacts' }">Contacts</router-link>
+                        <router-link class="nav-link" :to="{ name: 'contacts' }">Contatti</router-link>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
 </template>
 
 <style lang="scss" scoped>
