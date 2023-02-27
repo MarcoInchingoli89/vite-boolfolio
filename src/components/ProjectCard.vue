@@ -44,23 +44,24 @@ export default {
 
 <template>
     <div class="col">
-        <div class="card bg-dark text-white border-0 shadow h-100 animate__animated animate__zoomIn">
+        <div class="card bg_dark text-white border-0 shadow h-100 animate__animated animate__zoomIn">
             <div class="card-img-container">
                 <img class="card-img-top img-fluid" :src="getImagePath(project.cover_image)" alt="">
                 <div class="overlay"></div>
                 <h4 class="card-title">{{ project.title }}</h4>
             </div>
             <div class="card-body">
-                <p class="card-description">{{ project.description }}</p>
+                <p class="card-description text-center">{{ project.description }}</p>
                 <div class="card-links">
-                    <a href="#" class="btn btn-primary">Web</a>
-                    <a :href="project.source_code" class="btn btn-secondary" target="_blank">Code</a>
+                    <a href="#" class="btn btn-primary rounded-pill px-5 py-2">Web</a>
+                    <a :href="project.source_code" class="btn btn-secondary ms-3 rounded-pill px-5 py-2"
+                        target="_blank">Code</a>
                 </div>
             </div>
-            <div class="card-footer text-muted">
-                <div class="technologies">
+            <div class="card-footer text-muted p-0">
+                <div class="technologies text-center">
                     <strong>Technologies: </strong>
-                    <div class="technologies-list">
+                    <div class="technologies-list mt-1 mb-2">
                         <span v-if="project.technologies.length > 0">
                             <span v-for="technology in project.technologies" class="technology">{{ technology.name }}</span>
                         </span>
@@ -75,6 +76,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
+.bg_dark {
+    background-color: $bf-darker;
+}
+
 .card-img-container {
     position: relative;
     overflow: hidden;
@@ -126,7 +133,26 @@ export default {
 .card-links {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: $bf-dark;
+    border: none;
+}
+
+.btn-primary:hover {
+    color: $bf-secondary;
+    background-color: $bf-primary;
+}
+
+.btn-secondary {
+    background-color: $bf-secondary;
+    border: none;
+}
+
+.btn-secondary:hover {
+    color: $bf-secondary;
+    background-color: $bf-primary;
 }
 
 .technology {
