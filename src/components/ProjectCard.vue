@@ -53,14 +53,14 @@ export default {
             <div class="card-body">
                 <p class="card-description text-center">{{ project.description }}</p>
                 <div class="card-links">
-                    <a href="#" class="btn btn-primary rounded-pill px-5 py-2">Web</a>
+                    <a :href="project.project_url" class="btn btn-primary rounded-pill px-5 py-2" target="_blank">Web</a>
                     <a :href="project.source_code" class="btn btn-secondary ms-3 rounded-pill px-5 py-2"
                         target="_blank">Code</a>
                 </div>
             </div>
             <div class="card-footer text-muted p-0">
                 <div class="technologies text-center">
-                    <strong>Technologies: </strong>
+                    <strong>Tecnologie: </strong>
                     <div class="technologies-list mt-1 mb-2">
                         <span v-if="project.technologies.length > 0">
                             <span v-for="technology in project.technologies" class="technology">{{ technology.name }}</span>
@@ -89,6 +89,7 @@ export default {
 
 .card-img-top {
     transition: transform 0.5s ease;
+    height: 250px;
 }
 
 .overlay {
