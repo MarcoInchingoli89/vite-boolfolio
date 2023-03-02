@@ -63,12 +63,18 @@ export default {
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
-            <router-link class="text-info text-decoration-none" :to="{ name: 'about' }">Marco Inchingoli</router-link>
+            <router-link class="color_secondary text-decoration-none" :to="{ name: 'about' }">Marco Inchingoli</router-link>
         </div>
     </footer>
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
+.color_secondary {
+    color: $bf-secondary;
+}
+
 .techno_image img {
     position: relative;
     top: 0;
